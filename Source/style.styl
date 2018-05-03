@@ -1,0 +1,53 @@
+// fa-regular-400.ttf
+@font-face 
+	font-family 'fa'
+	src url('font/fontawesome-webfont.woff2')
+	font-weight normal
+	font-style normal
+.fa
+	font-family 'fa'
+	-webkit-font-smoothing antialiased
+	display inline-block
+	font-style normal
+	font-variant normal
+	text-rendering auto
+	line-height 1
+
+body
+	color #767676
+.m20-0
+	margin 20px 0
+.item_menu:hover
+	color #000000
+	cursor pointer
+
+.item_menu:hover .test
+	display flex
+	opacity 1
+	transition opacity 1.3s ease-in-out
+	
+.item_menu:hover div
+	color #000
+	transform rotate(-180deg)
+
+.item_menu
+	display flex
+	margin-left 1.875rem
+	position relative
+.angle-up
+	display inline-block
+	transition all .3s ease-in-out
+	margin-left 1em
+
+.angle-up:after
+	content "\F107"
+	font-family 'fa'
+	transform rotate(180deg)
+
+.test
+	display none
+	position absolute
+	top 100%
+	transition opacity 1.3s ease-in-out
+	background  #000
+	opacity 0
