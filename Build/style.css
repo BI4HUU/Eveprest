@@ -19,26 +19,44 @@ body {
 .m20-0 {
   margin: 20px 0;
 }
+.item_menu {
+  display: flex;
+  margin-left: 1.875rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  font-family: Arimo, sans-serif;
+  position: relative;
+}
 .item_menu:hover {
   color: #000;
   cursor: pointer;
 }
-.item_menu:hover .test {
+.item_menu:first-child {
+  margin-left: 0;
+}
+.item_menu:hover .megaMenu {
   display: flex;
   opacity: 1;
-  transition: opacity 1.3s ease-in-out;
+  visibility: visible;
+  background: #090;
 }
-.item_menu:hover div {
+.megaMenu {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0.2;
+  left: 0;
+  top: 100%;
+  background: #900;
+  transition: all 0.3s ease-in-out;
+}
+.item_menu:hover .angle-up {
+  opacity: 0.2;
   color: #000;
   transform: rotate(-180deg);
 }
-.item_menu {
-  display: flex;
-  margin-left: 1.875rem;
-  position: relative;
-}
 .angle-up {
   display: inline-block;
+  opacity: 1;
   transition: all 0.3s ease-in-out;
   margin-left: 1em;
 }
@@ -46,12 +64,4 @@ body {
   content: "\F107";
   font-family: 'fa';
   transform: rotate(180deg);
-}
-.test {
-  display: none;
-  position: absolute;
-  top: 100%;
-  transition: opacity 1.3s ease-in-out;
-  background: #000;
-  opacity: 0;
 }
