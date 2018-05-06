@@ -15,27 +15,48 @@
 
 body
 	color #767676
+	
 .m20-0
 	margin 20px 0
-.item_menu:hover
-	color #000000
-	cursor pointer
-
-.item_menu:hover .test
-	display flex
-	opacity 1
-	transition opacity 1.3s ease-in-out
-	
-.item_menu:hover div
-	color #000
-	transform rotate(-180deg)
 
 .item_menu
 	display flex
 	margin-left 1.875rem
-	position relative
+	font-weight 700
+	font-size .8rem
+	font-family Arimo, sans-serif
+	position relative	
+
+.item_menu:hover
+	color #000000
+	cursor pointer
+	
+.item_menu:first-child
+	margin-left 0
+
+.item_menu:hover .megaMenu
+	display flex
+	opacity 1
+	visibility visible
+	background  #090
+
+.megaMenu
+	visibility hidden
+	position absolute
+	opacity .2	
+	left 0
+	top 100%
+	background  #900
+	transition all .3s ease-in-out
+
+.item_menu:hover .angle-up
+	opacity .2	
+	color #000
+	transform rotate(-180deg)
+
 .angle-up
 	display inline-block
+	opacity 1	
 	transition all .3s ease-in-out
 	margin-left 1em
 
@@ -44,10 +65,3 @@ body
 	font-family 'fa'
 	transform rotate(180deg)
 
-.test
-	display none
-	position absolute
-	top 100%
-	transition opacity 1.3s ease-in-out
-	background  #000
-	opacity 0
