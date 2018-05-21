@@ -4,6 +4,11 @@
 	src url('font/fontawesome-webfont.woff2')
 	font-weight normal
 	font-style normal
+@font-face 
+	font-family 'fl'
+	src url('font/fl-chapps.woff')
+	font-weight normal
+	font-style normal
 .fa
 	font-family 'fa'
 	-webkit-font-smoothing antialiased
@@ -12,9 +17,28 @@
 	font-variant normal
 	text-rendering auto
 	line-height 1
-
+.fl:after
+	font-family 'fl'
+	font-size 1.125rem
+	font-weight 400
+.fl
+	font-family 'fl'
+	-webkit-font-smoothing antialiased
+	display inline-block
+	font-style normal
+	font-variant normal
+	text-rendering auto
+	line-height 1
+.db
+	display block
 body
-	color #767676
+	color #888
+
+header
+	align-items center
+	
+.logo
+	height 40px
 	
 .m20-0
 	margin 20px 0
@@ -36,32 +60,57 @@ body
 
 .item_menu:hover .megaMenu
 	display flex
-	opacity 1
 	visibility visible
-	background  #090
+	opacity 1
 
 .megaMenu
+	box-sizing border-box
 	visibility hidden
 	position absolute
 	opacity .2	
 	left 0
 	top 100%
-	background  #900
 	transition all .3s ease-in-out
+	margin-top 20px
+	
 
 .item_menu:hover .angle-up
-	opacity .2	
 	color #000
 	transform rotate(-180deg)
 
 .angle-up
 	display inline-block
-	opacity 1	
+	transform-origin center
 	transition all .3s ease-in-out
-	margin-left 1em
+	margin 0 0 0 1em
 
 .angle-up:after
 	content "\F107"
 	font-family 'fa'
 	transform rotate(180deg)
+
+.icon_user:after
+	content "\E01C"
+.icon_loop:after
+	content "\E014"
+.icon_love:after
+	content "\E00B"
+.icon_shop:after
+	content "\E00A"
+	
+.fl:hover
+	color #ea917d
+	
+.item_megaMenu
+	margin 5px 0
+	font-weight 400
+	color #888
+.item_megaMenu:hover
+	color #ea917d
+
+
+
+
+
+
 
