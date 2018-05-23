@@ -13,10 +13,25 @@ html(lang="en")
 				.d-flex.m20-0.col-12.col-sm-12.col-xl-5
 					.item_menu WOMEN
 						div.angle-up
-						div.megaMenu fggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+							img(src="", alt="")
+						div.megaMenu.d-flex
+							mixin col_megaMenu(h5, arr)
+								.col_megaMenu
+									h5= h5
+									hr
+									each val, index in arr
+										a.item_megaMenu(href=index)= val
+							+col_megaMenu('CLOTHING', {'#1': 'New Arrivals', '#2': 'Dresses','#3': 'Prom Dresses',  '#4': 'Maxi Dresses', '#5': 'Tops', '#6': 'Bodysuits', '#7': 'Shirts & Blouses', '#8': 'Suits & Separates', })
+							+col_megaMenu('CLOTHING', {'#1': 'New Arrivals', '#2': 'Dresses','#3': 'Prom Dresses',  '#4': 'Maxi Dresses', '#5': 'Tops', '#6': 'Bodysuits', '#7': 'Shirts & Blouses', '#8': 'Suits & Separates', })
+							+col_megaMenu('CLOTHING', {'#1': 'New Arrivals', '#2': 'Dresses','#3': 'Prom Dresses',  '#4': 'Maxi Dresses', '#5': 'Tops', '#6': 'Bodysuits', '#7': 'Shirts & Blouses', '#8': 'Suits & Separates', })
+							.col_megaMenu_img
+								img(src="img/menu-banner.jpg", alt="menu-banner")
 					.item_menu MEN
 						div.angle-up
-						div.megaMenu fgg
+						div.megaMenu.d-flex
+							.item_megaMenu English
+							.item_megaMenu Русский
+							.item_megaMenu Français
 					.item_menu TEENS
 					.item_menu KIDS
 					.item_menu LOOKBOOK
@@ -26,13 +41,14 @@ html(lang="en")
 					.item_menu EN
 						div.angle-up
 						div.megaMenu
-							.db
-								.item_megaMenu English
-								.item_megaMenu Русский
-								.item_megaMenu Français
+							.item_megaMenu English
+							.item_megaMenu Русский
+							.item_megaMenu Français
 					.item_menu USD
 						div.angle-up
-						div.megaMenu fgg
+						div.megaMenu
+							.item_megaMenu EUR(€)
+							.item_megaMenu USD($)
 					.item_menu.fl.icon_user
 					.item_menu.fl.icon_loop
 					.item_menu.fl.icon_love

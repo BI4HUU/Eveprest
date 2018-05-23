@@ -32,7 +32,7 @@
 .db
 	display block
 body
-	color #888
+	color #999
 
 header
 	align-items center
@@ -59,7 +59,6 @@ header
 	margin-left 0
 
 .item_menu:hover .megaMenu
-	display flex
 	visibility visible
 	opacity 1
 
@@ -70,10 +69,24 @@ header
 	opacity .2	
 	left 0
 	top 100%
-	transition all .3s ease-in-out
 	margin-top 20px
-	
+	padding 30px
+	transition all .3s ease-in-out
+	box-shadow 0px 10px 30px 0px rgba(80,80,80,0.4)
 
+.col_megaMenu
+	min-width 120px
+	margin-right 40px
+	flex-grow 0
+	h5
+		color #bbb
+		font-size 12px
+	a
+		text-decoration none
+.col_megaMenu_img
+	height 100%
+	overflow hidden
+	
 .item_menu:hover .angle-up
 	color #000
 	transform rotate(-180deg)
@@ -102,7 +115,9 @@ header
 	color #ea917d
 	
 .item_megaMenu
+	display block
 	margin 5px 0
+	padding 3px
 	font-weight 400
 	color #888
 .item_megaMenu:hover
