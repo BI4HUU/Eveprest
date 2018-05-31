@@ -29,9 +29,13 @@ html(lang="en")
 					.item_menu MEN
 						div.angle-up
 						div.megaMenu.d-flex
-							.item_megaMenu English
-							.item_megaMenu Русский
-							.item_megaMenu Français
+							.col_megaMenu.m-0
+								.wrap_megaMenuLvl2
+									a.item_megaMenu(href='#') T-Shirts & Vests
+								mixin col_megaMenuNoHead(arr2)
+									each val, index in arr2
+										a.item_megaMenu(href=index)= val
+								+col_megaMenuNoHead({'#1': 'T-Shirts & Vests', '#2': 'Jumpers & Cardigans','#3': 'Hoodies & Sweats',  '#4': 'Maxi Dresses', '#5': 'Tops', '#6': 'Bodysuits', '#7': 'Shirts & Blouses', '#8': 'Suits & Separates', })
 					.item_menu TEENS
 					.item_menu KIDS
 					.item_menu LOOKBOOK
