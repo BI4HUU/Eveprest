@@ -31,6 +31,7 @@
 	line-height 1
 .db
 	display block
+
 body
 	color #999
 
@@ -45,14 +46,12 @@ header
 
 .item_menu
 	display flex
+	position relative
 	margin-left 1.875rem
 	font-weight 700
 	font-size .8rem
 	font-family Arimo, sans-serif
-	position relative
 	white-space nowrap
-
-
 
 .item_menu:hover
 	color #000000
@@ -73,19 +72,19 @@ header
 	left 0
 	top 100%
 	margin-top 20px
-	padding 30px
+	// padding 30px
 	transition all .3s ease-in-out
+	background #ffffff
 	box-shadow 0px 10px 30px 0px rgba(80,80,80,0.4)
 
 .col_megaMenu
 	min-width 120px
-	margin-right 40px
-	flex-grow 0
 	h5
 		color #bbb
 		font-size 12px
 	a
 		text-decoration none
+
 .col_megaMenu_img
 	height 100%
 	overflow hidden
@@ -93,17 +92,32 @@ header
 .item_menu:hover .angle-up
 	color #000
 	transform rotate(-180deg)
+	
+.item_megaMenu:hover .angle-up-right
+	color #000
+	transform translateX(4px) rotate(-90deg)
 
 .angle-up
 	display inline-block
 	transform-origin center
 	transition all .3s ease-in-out
 	margin 0 0 0 1em
+	transform rotate(0deg)
+
+.angle-up-right
+	display inline-block
+	transform-origin center
+	transition all .3s ease-in-out
+	margin 0 0 0 1em
+	transform translateX(0px) rotate(-90deg)
 
 .angle-up:after
 	content "\F107"
 	font-family 'fa'
-	transform rotate(180deg)
+
+.angle-up-right:after
+	content "\F107"
+	font-family 'fa'
 
 .icon_user:after
 	content "\E01C"
@@ -120,19 +134,72 @@ header
 .item_megaMenu
 	display block
 	margin 5px 0
-	padding 3px
+	padding 3px 70px 3px 30px
 	font-weight 400
 	color #888
 	transition all .3s ease-in-out
+	box-sizing border-box
+.item_megaMenu:last-child
+	margin-bottom 30px
+.item_megaMenu:first-child
+	margin-top 30px
 .item_megaMenu:hover
 	color #ea917d
 
+
+.See:hover .wrap_megaMenuLvl3
+	visibility visible
+	opacity 1
+
 .wrap_megaMenuLvl2
 	width 100%
-	background red
 
+.wrap_megaMenuLvl3
+	width 100%
+	visibility hidden
+	opacity .2
+	position absolute
+	left 99%
+	top 0
+	box-sizing border-box
+	margin-left 7px
+	background #fff
+	transition all .3s ease-in-out
+	box-shadow 0px 10px 30px 0px rgba(80,80,80,0.4)
+
+.pos-r
+	position relative
 .m-0
 	margin 0
+
+.fullBgImg
+	background-image url('img/bg1.jpg')
+	background-position top
+	background-repeat no-repeat
+	background-size cover
+
+.category-description
+	padding 8rem 1rem 11rem 1rem
+	width 55%
+	color #fff
+	p
+		margin-top: 1.5rem
+		line-height 1.8rem
+
+.body
+	display flex
+	padding-top 5rem
+
+// .aside
+	
+
+// .content
+
+
+
+
+
+
 
 
 

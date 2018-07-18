@@ -29,9 +29,16 @@ html(lang="en")
 					.item_menu MEN
 						div.angle-up
 						div.megaMenu.d-flex
-							.col_megaMenu.m-0
+							.col_megaMenu.pos-r
 								.wrap_megaMenuLvl2
-									a.item_megaMenu(href='#') T-Shirts & Vests
+									.See
+										a.item_megaMenu.See(href='#') T-Shirts &amp; Vests
+											div.angle-up-right
+											div.wrap_megaMenuLvl3.col_megaMenu
+												mixin col_megaMenuNoHead(arr2)
+													each val, index in arr2
+														a.item_megaMenu(href=index)= val
+												+col_megaMenuNoHead({'#1': 'T-Shirts & Vests', '#2': 'Jumpers & Cardigans','#3': 'Hoodies & Sweats',  '#4': 'Maxi Dresses', '#5': 'Tops', '#6': 'Bodysuits', '#7': 'Shirts & Blouses', '#8': 'Suits & Separates', })
 								mixin col_megaMenuNoHead(arr2)
 									each val, index in arr2
 										a.item_megaMenu(href=index)= val
@@ -57,6 +64,22 @@ html(lang="en")
 					.item_menu.fl.icon_loop
 					.item_menu.fl.icon_love
 					.item_menu.fl.icon_shop
+		section.fullBgImg
+			.container
+				.category-description
+					h3 Teens
+					p Fashion has always been so temporary and uncertain. You can’t keep up with it.  This social phenomenon is very whimsical, thus we as the consumers always try to stay in touch with all the latest fashion tendencies.
+		.container.body
+			.aside.col-md-3
+				h3 Filter By
+				h5 Brand
+				mixin col_Brand(arr3)
+					each val, index in arr3
+						input(type="checkbox", name="brand")
+						a.a_brand(href=index)= val
+
+
+			.content.col-md-9 ||||
 
 
 
